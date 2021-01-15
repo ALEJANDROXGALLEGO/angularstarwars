@@ -1,0 +1,24 @@
+<div   *ngIf="pelicula.length > 0" class="container"> 
+
+<h1 class="animated fadeIn">{{ pelicula[0].title | uppercase }}</h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+
+  <div class="col-md-4">
+
+    <img src="assets/img/pelicula.jpg" class="img-fluid" [alt]="pelicula.nombre">
+    <br><br>
+    <a [routerLink]="['/personajes']" class="btn btn-outline-danger btn-block">Regresar</a>
+
+  </div>
+
+  <div class="col-md-8">
+    <h3> Episodio: {{ pelicula[0].episode_id }}</h3>
+    <hr>
+    <h3>       Director: {{ pelicula[0].director }}</h3>
+    <hr>
+  </div>
+
+</div>
+</div>

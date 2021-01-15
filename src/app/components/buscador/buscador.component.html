@@ -1,0 +1,19 @@
+<h1>Buscando: <small>{{ termino }}</small></h1>
+<hr>
+
+<div class="row animated fadeIn fast" *ngIf="peliculas.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+      No existen resultados con el término: {{ termino }}
+    </div>
+  </div>
+</div>
+
+
+<div class="card-columns">
+
+  <app-pelicula-tarjeta [pelicula]="foo"   *ngFor="let foo of peliculas"></app-pelicula-tarjeta>
+
+
+
+</div>

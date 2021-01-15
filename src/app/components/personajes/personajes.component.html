@@ -1,0 +1,10 @@
+<div class="jumbotron jumbotron-fluid animated fadeIn fast">
+    <div class="container">
+      <h1 class="display-3">Personajes de Star Wars</h1>
+    </div>
+  </div>
+<hr>
+
+<div class="card-columns">
+  <app-personaje-tarjeta (personajeSeleccionado)="verPersonaje( $event )" [personaje]="too"    *ngFor="let too of personajes; let i = index"></app-personaje-tarjeta>
+</div>

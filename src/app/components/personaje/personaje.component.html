@@ -1,0 +1,21 @@
+<div   *ngIf="personaje.length > 0" class="container"> 
+
+  
+
+<h1 class="animated fadeIn">{{ personaje[0].name | uppercase }}</h1>
+<hr>
+<div class="row animated fadeIn fast">
+  <div class="col-md-4 card p-3">
+    <img src="assets/img/starwars.png" class="img-fluid" [alt]="personaje.name">
+    <br><br>
+
+    <p> Ojos: {{ personaje[0].eye_color }}</p>
+    <p> Género: {{ personaje[0].gender }}</p>
+    <p> Lista de peliculas</p>
+    <p   *ngFor="let person of personaje[0].films; let i = index"> {{ person }}</p>
+
+    <a [routerLink]="['/peliculas']" class="btn btn-outline-danger btn-block">Regresar</a>
+  </div>
+
+</div>
+</div>

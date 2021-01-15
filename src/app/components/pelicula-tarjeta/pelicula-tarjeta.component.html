@@ -1,0 +1,21 @@
+<div class="card animated fadeIn fast">
+  <img
+    class="card-img-top img-fluid"
+    src="assets/img/starwars.png"
+    [alt]="pelicula.name"
+  />
+  <div class="card-body">
+    <h2 class="card-title">{{ pelicula.title }}</h2>
+    <h3 class="card-text">Episodio: {{ pelicula.episode_id }}</h3>
+    <p class="card-text">Director: {{ pelicula.director }}</p>
+    <h4 class="card-text">Personajes:   </h4>
+    <button
+      *ngFor="let persona of pelicula.characters ; let i = index"
+      (click)="verPersonaje(persona)"
+      type="button"
+      class="btn btn-link btn-block"
+    >
+     {{persona}}
+    </button>
+  </div>
+</div>

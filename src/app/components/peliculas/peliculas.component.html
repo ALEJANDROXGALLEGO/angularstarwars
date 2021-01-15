@@ -1,0 +1,10 @@
+<div class="jumbotron jumbotron-fluid animated fadeIn fast">
+    <div class="container">
+      <h1 class="display-3">Peliculas de StarWars</h1>
+    </div>
+  </div>
+<hr>
+
+<div class="card-columns">
+  <app-pelicula-tarjeta (peliculaSeleccionado)="verPelicula( $event )" [pelicula]="foo"    *ngFor="let foo of peliculas; let i = index"></app-pelicula-tarjeta>
+</div>
